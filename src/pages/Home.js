@@ -80,7 +80,6 @@ class Home extends PureComponent {
 
                     </SubTitle>
                     <SubTitle>
-                    We ask that no children under the age of 14 attend the <strong>after party</strong>, nothing personal. Dogs however are welcome and encouraged.
                     </SubTitle>
                     <SubTitle>
                       We are so looking forward to celebrating with you all!

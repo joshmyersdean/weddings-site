@@ -121,10 +121,11 @@ class GuestsForm extends Component {
     };
 
     renderCurrentGuestHeader = () => {
-            const { currentGuestIdx, numberOfGuests  } = this.state;
+            const { currentGuestIdx } = this.state.currentGuestIdx;
             const { guests  } = this.props;
-
-            const currentGuest = guests[currentGuestIdx];
+            const currentGuest = guests.name;
+            console.log(guests.name);
+            const numberOfGuests = 1;
             const guestNumberIndicatorText = `${currentGuestIdx + 1}/${numberOfGuests}`;
         return (
                   <CurrentGuestHeader>

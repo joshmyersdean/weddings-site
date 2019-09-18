@@ -42,6 +42,8 @@ class RSVP extends Component {
     history.push(HOME.path);
   };
 
+
+
   loadParties = () => {
     const { loadingPartiesErrorId } = this.state;
 
@@ -52,10 +54,12 @@ class RSVP extends Component {
     this.setState({ isLoading: true, loadingPartiesErrorId: null });
 
     const partiesRef = dbRef.ref("parties");
+      console.log(partiesRef)
     partiesRef.once(
       "value",
       snapshot => {
         const parties = [];
+          console.log(parties);
         snapshot.forEach(party => {
           parties.push({
             ...party.val(),
@@ -89,16 +93,16 @@ class RSVP extends Component {
     );
   };
 
+
+
+
   getPartyWithGuestName = name => {
     const { allParties } = this.state;
-
+    console.log(allParties)
     const nameToFind = name.toLowerCase().replace(/ /g, "");
     return allParties.filter(party => {
-      return party.guests.find(guest => {
-        const guestsName = guest.name.toLowerCase().replace(/ /g, "");
-
-        return guestsName === nameToFind;
-      });
+        console.log(party.guests.name);
+        return party.guests.name == nameToFind;
     });
   };
 
@@ -250,10 +254,10 @@ class RSVP extends Component {
             closeButton={AlertCloseButton}
           />
           {isLoading && <LoadingIndicator />}
-          {this.renderNameForm()}
-          //{this.shouldRenderGuestsForm() && this.renderGuestsForm()}
-          //{this.shouldRenderConfirmation() && this.renderConfirmationScreen()}
-        //  {this.shouldRenderMultiMatchForm() && this.renderMultiMatchForm()}
+          {this.shouldRenderNameForm() && this.renderNameForm()}
+          {this.shouldRenderGuestsForm() && this.renderGuestsForm()}
+          {this.shouldRenderConfirmation() && this.renderConfirmationScreen()}
+        {this.shouldRenderMultiMatchForm() && this.renderMultiMatchForm()}
         </Fragment>
       </PageWithNav>
     );
