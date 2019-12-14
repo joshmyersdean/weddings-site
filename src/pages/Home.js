@@ -44,7 +44,7 @@ const DaysLeft = styled(Countdown)`
   color: ${props => props.theme.colors.foreground.secondary};
 `;
 
-const WEDDING_DATE = new Date(2020, 6, 20);
+const WEDDING_DATE = new Date(2020, 9, 18);
 const TODAY = new Date();
 
 class Home extends PureComponent {
@@ -73,10 +73,10 @@ class Home extends PureComponent {
                     <MainTitle>Josh and Julia, J&#178;</MainTitle>
                     <DaysLeft fromDate={TODAY} toDate={WEDDING_DATE} />
                     <SubTitle>
-                        We're getting married! Excited to share the day with ya'll. Come join us for a fun filled evening of drinking and debauchery at Millersylvania State Park! We encourage you to stay the night and to party as hard as you would like, because after all this is a celebration!
+                        We're getting married! Excited to share the day with ya'll. Come join us for a fun filled evening of drinking and debauchery at Excelsior Group Campground! We encourage you to stay the night and to party as hard as you would like, because after all this is a celebration!
                     </SubTitle>
                     <SubTitle>
-                      Don’t forget to RSVP <strong>before December 15th</strong> and to include any dietary restrictions/allergies you may have. <em>Note: No animal products will be served at this wedding, we make good food, I promise!</em>
+                      Don’t forget to RSVP <strong>before May 15th</strong> and to include any dietary restrictions/allergies you may have. <em>Note: No animal products will be served at this wedding, we make good food, I promise!</em>
 
                     </SubTitle>
                     <SubTitle>
