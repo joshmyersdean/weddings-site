@@ -15,21 +15,24 @@ export const H4 = styled.h4`
 `;
 
 export const H5 = styled.h5`
-  font-size: ${props => props.theme.fonts.h5.size};
+  @import url("https://fonts.googleapis.com/css?family=Unica+One&display=swap")
+    font-size: ${props => props.theme.fonts.h5.size};
   font-weight: ${props => props.theme.fonts.h5.weight};
   letter-spacing: ${props => props.theme.fonts.h5.letterspacing};
   color: ${props => props.theme.colors.foreground.default};
 `;
 
 export const H6 = styled.h6`
-  font-size: ${props => props.theme.fonts.h6.size};
+  @import url("https://fonts.googleapis.com/css?family=Unica+One&display=swap")
+    font-size: ${props => props.theme.fonts.h6.size};
   font-weight: ${props => props.theme.fonts.h6.weight};
   letter-spacing: ${props => props.theme.fonts.h6.letterspacing};
   color: ${props => props.theme.colors.foreground.default};
 `;
 
 export const S1 = styled.p`
-  font-size: ${props => props.theme.fonts.s1.size};
+  @import url("https://fonts.googleapis.com/css?family=Unica+One&display=swap")
+    font-size: ${props => props.theme.fonts.s1.size};
   font-weight: ${props => props.theme.fonts.s1.weight};
   letter-spacing: ${props => props.theme.fonts.s1.letterspacing};
   color: ${props => props.theme.colors.foreground.default};
@@ -43,17 +46,20 @@ export const S2 = styled.p`
 `;
 
 export const B1 = styled.p`
-  font-size: ${props => props.theme.fonts.b1.size};
+  @import url("https://fonts.googleapis.com/css?family=Unica+One&display=swap")
+    font-size: ${props => props.theme.fonts.b1.size};
   font-weight: ${props => props.theme.fonts.b1.weight};
   letter-spacing: ${props => props.theme.fonts.b1.letterspacing};
   color: ${props => props.theme.colors.foreground.default};
 `;
 
 export const B2 = styled.p`
-  font-size: ${props => props.theme.fonts.b2.size};
+  @import url("https://fonts.googleapis.com/css?family=Unica+One&display=swap")
+    font-size: ${props => props.theme.fonts.b2.size};
   font-weight: ${props => props.theme.fonts.b2.weight};
   letter-spacing: ${props => props.theme.fonts.b2.letterspacing};
   color: ${props => props.theme.colors.foreground.default};
+  text-align: center;
 `;
 
 export const Button = styled.span`

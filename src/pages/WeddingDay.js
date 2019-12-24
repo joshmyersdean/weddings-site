@@ -1,10 +1,9 @@
 import React, { Fragment } from "react";
 import styled from "styled-components";
 import PageWithNav from "./helpers/PageWithNav";
-import { H5, B2, H6 } from "../components/Fonts/Fonts";
+import { H5, B2, H6, H4 } from "../components/Fonts/Fonts";
 import { HOME, AFTER_PARTY, RSVP_ROUTE } from "../routes/routes";
 import { Nav, Navbar } from "react-bootstrap";
-
 
 const HeadingContainer = styled.section`
   margin-bottom: 1rem;
@@ -13,19 +12,34 @@ const HeadingContainer = styled.section`
 const MainHeader = styled(H5)`
   margin-bottom: 0.25rem;
   text-align: center;
+  font-size: 36px;
 `;
 
-const VenueInfo = styled(H6)`
+const VenueInfo = styled(H5)`
   margin-bottom: 1rem;
   text-align: center;
   color: ${props => props.theme.colors.background.quintenary};
 `;
 
-const SectionTitle = styled(H6)`
+const At = styled(H6)`
+  font-size: 2.8em;
+  top: 0.1em;
+  position: relative;
+  color: #537d36;
+  text-align: center;
+`;
+
+const SectionTitle = styled(H5)`
   margin-top: 2rem;
   margin-bottom: 1rem;
   text-align: center;
   color: ${props => props.theme.colors.background.quintenary};
+`;
+
+const SectionTitle2 = styled(H5)`
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
 `;
 
 const P = styled(B2)`
@@ -51,8 +65,14 @@ export default () => (
   <PageWithNav>
     <Fragment>
       <HeadingContainer>
-        <MainHeader>18th September 2020</MainHeader>
-        <VenueInfo>Excelsior Group Campground</VenueInfo>
+        <MainHeader>
+          Join Us On <br />
+          18th September 2020
+        </MainHeader>
+        <At>@</At>
+        <MainHeader>Excelsior Group Campground</MainHeader>
+        <SectionTitle2>For Our Wedding Ceremony</SectionTitle2>
+        <br />
         <B2>
           Our wedding ceremony will take place at x time at y place and the
           party will begin at 5pm at z place.
@@ -72,7 +92,17 @@ export default () => (
       </P>
 
       <SectionTitle>Directions</SectionTitle>
-      // @TODO
+      <DirectionsContainer>
+        <DirectionsFrame
+          title="Directions"
+          width="300"
+          height="300"
+          id="gmap_canvas"
+          src={}
+          frameborder="0"
+          scrolling="no"
+        />
+      </DirectionsContainer>
 
       <SectionTitle>Details</SectionTitle>
       <P>

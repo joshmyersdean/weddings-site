@@ -11,3 +11,62 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+div .book-pg {
+  text-align: center;
+  border: 1px solid #6b994d;
+}
+
+div .book-pg img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.book-container {
+  margin: 2em;
+  text-align: center;
+}
+
+.book {
+  max-width: 100%;
+  max-height: 100%;
+  display: inline-block;
+}
+
+.book-pg h2 {
+  font-family: "Unica One", Serif;
+}
+
+.video-container {
+  text-align: center;
+}
+
+.video-container h3 {
+  font-family: "Unica One", Serif;
+}
+.proposal {
+  max-height: 100%;
+  max-width: 100%;
+  display: inline-block;
+}
+
+@media only screen and (min-device-width: 961px) {
+  .book {
+    height: 700px !important;
+    width: 700px !important;
+  }
+
+  .book-pg img {
+    width: 600px;
+    height: 600px;
+  }
+
+  .book-pg video {
+    width: 600px;
+    height: 600px;
+  }
+  .video-container {
+    width: 600px;
+    height: 600px;
+  }
+}
