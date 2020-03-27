@@ -1,9 +1,15 @@
 import React, { Fragment } from "react";
+import '../style/rsvp.css'
 import styled from "styled-components";
 import PageWithNav from "./helpers/PageWithNav";
-import { H5, H6, B2 } from "../components/Fonts/Fonts";
-import { Form, Input } from "formsy-react-components";
+import { Form} from "formsy-react-components";
+import { Input } from "../components/Input";
+import { Button } from "react-bootstrap";
 import axios from 'axios';
+import {
+		withRouter
+	
+} from 'react-router-dom';
 
 
 
@@ -26,8 +32,10 @@ import axios from 'axios';
 	this.setState({diet: e.target.value})
 }
  handleNameChange(e) {
+	 console.log("here")
 	this.setState({name: e.target.value})
 }
+
  handleGuestChange(e) {
 	this.setState({guest: e.target.value})
 }
@@ -44,7 +52,7 @@ import axios from 'axios';
 }  
  
  onSubmit(e) {
-	      e.preventDefault();
+      e.preventDefault();
       const guest = {
         name: this.state.name,
         guest: this.state.guest,
@@ -53,14 +61,18 @@ import axios from 'axios';
       }
 	 axios.post('http://localhost:8000/guest', guest)
       .then(res => {
-	      console.log(res)
+
           const guests = res.data;
-          this.setState({ guests });
+	      if (guests.includes("Error")) {
+		      window.alert("Please fill out the form completely.")
+		      return
+	      }  
+			
         })         
-		 .catch(error => {
-			 console.log(error)
-		 })
-    
+	 .catch(error => {
+		 return
+	 })
+	 this.props.history.push('/')
 }  
 
 render() {
@@ -68,25 +80,37 @@ return (
   <PageWithNav>
 	  <Fragment>
     	    <form
-    	      onSubmit={this.onSubmit}
-    	    >
+	    >
+	      <div>
+	      <label>Please enter your full name(s).</label>
     	      <input
     	        name="firstname"
     	        label="Please Enter Your First and Last Name(s)."
-    	      onChange={this.handleNameChange}/>
-    	      <input type="text" name="guest" label="Are You Bringing a Guest? (Note if you are a couple you are not)" onChange={this.handleGuestChange} />
-	      <input type="text" name="diet" label="Do You Have Any Food Allergies?" onChange={this.handleDietChange}/>
-	      <input type="text" name="camp" label="Are you camping?" onChange={this.handleCampChange} />
-    	      <input
+		onChange={(e) => this.handleNameChange(e)}/></div>
+		<div>
+			<label>Are you bringing a guest? (This does not apply to couples)</label>
+    	      <input  name="guest" label="Are You Bringing a Guest? (Note if you are a couple leave this blank)" onChange={this.handleGuestChange} />
+      </div>
+      <div>
+	      <label>Do you have any dietary restrictions?</label>
+	      <input  name="diet" label="Do You Have Any Food Allergies?" onChange={this.handleDietChange}/>
+      </div>
+      <div>
+	      <label>Are you camping? If yes do you have camping gear?</label>
+	      <input  name="camp" label="Are you camping? If yes do you have camping supplies?" onChange={this.handleCampChange} />
+      </div>
+    	      <Button
+		variant="success"
+    	      onClick={ (event) => this.onSubmit(event)}
     	        name="button"
-    	        className="btn btn-primary"
+    	        className="btn"
     	        formNoValidate=""
     	        type="submit"
-    	      />
+    	      >Submit</Button>
     	    </form>
     	  </Fragment>
   </PageWithNav>
 );
 };
 }
-export default RSVP;
+export default withRouter(RSVP);
