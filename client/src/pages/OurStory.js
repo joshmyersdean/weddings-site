@@ -5,6 +5,7 @@ import { H5, H6, B2, H3 } from "../components/Fonts/Fonts";
 import FlipPage from "react-flip-page";
 import tinder from "../static/tinder.png";
 import julia from "../static/julia.jpg";
+import cover from "../static/cover.jpg"
 import proposal from "../media/proposal.mp4";
 
 const theEndStyle = {
@@ -32,7 +33,7 @@ export default () => (
               height={"400"}
               width={"350"}
               className="img-responsive"
-              src="https://scontent-sea1-1.cdninstagram.com/v/t51.2885-15/e35/34983474_1846045119034341_3045312854325460992_n.jpg?_nc_ht=scontent-sea1-1.cdninstagram.com&_nc_cat=109&_nc_ohc=1v51WVSuN6kAX_ZVN8H&oh=cfbf9ad9160cbf313ebd9a4b123216d8&oe=5EAF3C38"
+	      src={cover}
             />
           </div>
           <div className="book-pg">
@@ -159,7 +160,7 @@ export default () => (
         <video controls muted className="proposal">
           <source src={proposal} />
         </video>
-      </div>
+     </div>
     </Fragment>
   </PageWithNav>
 );

@@ -32,7 +32,6 @@ import {
 	this.setState({diet: e.target.value})
 }
  handleNameChange(e) {
-	 console.log("here")
 	this.setState({name: e.target.value})
 }
 
@@ -64,16 +63,18 @@ import {
 
           const guests = res.data;
 	      if (guests.includes("Error")) {
-		      window.alert("Please fill out the form completely.")
+		      window.alert("Form not submitted. Please fill out the form completely.")
 		      return
-	      }  
+	      } 
+	      
 			
         })         
-	 .catch(error => {
+		 .catch(error => {
 		 return
 	 })
+         window.alert("Form submitted!")
 	 this.props.history.push('/')
-}  
+ }  
 
 render() {
 return (
