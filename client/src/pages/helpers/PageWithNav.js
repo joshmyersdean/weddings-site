@@ -29,9 +29,6 @@ class PageWithNav extends Component {
           <Nav className="mr-auto">
             <Nav.Link href="/ourstory">Our Story</Nav.Link>
           </Nav>
-          <Nav className="mr-auto">
-            <Nav.Link href="/rsvp">RSVP</Nav.Link>
-          </Nav>
         </Navbar>
         <Nav2>
           <H3 onClick={this.goToHome}>{getTitleByPath(location.pathname)}</H3>

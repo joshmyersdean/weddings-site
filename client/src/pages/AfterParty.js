@@ -56,41 +56,18 @@ text-align: center;
 export default () => (
     <PageWithNav>
         <Fragment>
-
             <HeadingContainer>
                 <Tilt>
-                    <MainHeader>Come Party With Us!</MainHeader> <On>On</On><MainHeader>18th September 2020</MainHeader>
+                    <MainHeader>Come Party With Us!</MainHeader> <On>On</On><MainHeader>19th September 2020</MainHeader>
                 </Tilt>
                 <At>@</At>
-                <MainHeader>Excelsior Group Campground</MainHeader>
+                <MainHeader>2909 Martin St. Bellingham, WA 98229</MainHeader>
                 <br/>
                 <B2>
-                    Come partaaaaay with us!! We encourage everyone to bring a 6 pack of your favorite
-                    beer/cider/anything to share! (Shit beer strongly encouraged). We will have a bunch of food for
-                    everyone to accomadate all dietary restrictions, but keep in mind that no animal products will be
-                    served at this event. We will also have an edible bar for those who do not wish to drink! Dancing is
-                    mandatory, don't be a square.
+                    Please join us for a small afterparty at the same location as the ceremony! We will have music, drinks, dancing, and food. We also plan to do a bar crawl 
+                    starting at Structures Brewing at 8:30pm. Please make sure you have reliable transportation if you will be drinking. Bikes are very encouraged!
                 </B2>
             </HeadingContainer>
-
-            <SectionTitle>Accomodation</SectionTitle>
-            <P>
-                Please stay the night! We rented out the whole retreat center so there is ample bunk style housing,
-                camping, and even hotels near by! Don't drive intoxicated, it's not good for anyone.
-            </P>
-            <SectionTitle>Directions</SectionTitle>
-            <DirectionsContainer>
-                <DirectionsFrame
-                    title="Directions"
-                    width="300"
-                    height="300"
-                    id="gmap_canvas"
-                    src={key} // your key here
-                    frameborder="0"
-                    scrolling="no"
-                />
-            </DirectionsContainer>
-
         </Fragment>
     </PageWithNav>
 

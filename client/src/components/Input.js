@@ -1,4 +1,3 @@
-
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
@@ -30,10 +29,10 @@ const StyledInput = styled.input`
 }
 `;
 
-const Input = ({ label, placeholder, input, type }) => (
+const Input = ({ label, placeholder, input, type, onChange }) => (
       <Container>
         {label && <Label>{label}</Label>}
-        <StyledInput type={type} {...input} placeholder={placeholder} />
+        <StyledInput type={type} {...input} placeholder={placeholder} onChange={onChange}/>
       </Container>
 
 );
@@ -41,7 +40,8 @@ const Input = ({ label, placeholder, input, type }) => (
 Input.propTypes = {
       label: PropTypes.string,
       placeholder: PropTypes.string,
-      input: PropTypes.object.isRequired
+      input: PropTypes.object.isRequired,
+      onChange: PropTypes.func.isRequired
 
 };
 

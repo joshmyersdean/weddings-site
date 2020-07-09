@@ -41,6 +41,7 @@ app.get('/test', (req, res) => {
 
 //route for insert data
 app.post('/guest',(req, res) => {
+	console.log("hiiiiiii")
 	//let data = {name: req.body.name, guest: req.body.guest, camp: req.body.camp, diet: req.body.diet};
     	  let ins = `INSERT INTO ?? (??, ??, ??, ??) VALUES (?,?,?,?)`;
 	  let sql = mysql.format(ins, ["guests", "name", "guest", "camp", "diet",req.body.name, req.body.guest, req.body.camp, req.body.diet])

@@ -10,7 +10,6 @@ import PageContainer from "../components/PageContainer";
 import { VerticalButtonGroup } from "../components/ButtonGroup";
 import Countdown from "../components/Countdown";
 import {
-  RSVP_ROUTE,
   WEDDING_DAY,
   OUR_STORY,
   AFTER_PARTY
@@ -52,10 +51,6 @@ const WEDDING_DATE = new Date(2020, 9, 18);
 const TODAY = new Date();
 
 class Home extends PureComponent {
-  goToRSVP = () => {
-    const { history } = this.props;
-    history.push(RSVP_ROUTE.path);
-  };
 
   goToWeddingDay = () => {
     const { history } = this.props;
@@ -87,17 +82,12 @@ class Home extends PureComponent {
           </SubTitle>
           <SubTitle>
             We're getting married! Excited to share the day with ya'll. Come
-            join us for a fun filled evening of drinking and debauchery at
-            Excelsior Group Campground! We encourage you to stay the night and
-            to party as hard as you would like, because after all this is a
-            celebration!
+            join us for a fun filled day of drinking and debauchery at
+            our dearest friend Tyler's new backyard! We encourage you to come out with us after for a night of bar crawling in fancy attire after the festivities!
           </SubTitle>
           <SubTitle>
-            Don’t forget to RSVP <strong>before May 15th</strong> and to include
-            any dietary restrictions/allergies you may have.{" "}
             <em>
-              Note: No animal products will be served at this wedding, we make
-              good food, I promise!
+              Note: We are asking people to please leave their children at home for this! Also all events are COVID pending, and more details will be sent out via email closer to the actual day.
             </em>
           </SubTitle>
           <SubTitle></SubTitle>
@@ -120,8 +110,11 @@ class Home extends PureComponent {
             <Button buttonType={ButtonTypes.OUTLINE} onClick={this.goToStory}>
               Our Story
             </Button>
-            <Button buttonStyle={ButtonStyles.PRIMARY} onClick={this.goToRSVP}>
-              RSVP
+            <Button buttonType={ButtonTypes.OUTLINE} onClick={(e) => {
+      e.preventDefault();
+      window.location.href='https://www.zola.com/registry/joshandjuliaseptember19';
+      }}>
+              Registry
             </Button>
           </VerticalButtonGroup>
         </HomeContainer>

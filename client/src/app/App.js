@@ -21,11 +21,6 @@ class App extends Component {
             <Route exact path={HOME.path} component={HOME.component} />
             <Route
               exact
-              path={RSVP_ROUTE.path}
-              component={RSVP_ROUTE.component}
-            />
-            <Route
-              exact
               path={WEDDING_DAY.path}
               component={WEDDING_DAY.component}
             />
