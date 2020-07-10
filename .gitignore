@@ -10,3 +10,7 @@ src/firebase
 */node_modules
 /client/node_modules
 /server/node_modules
+*media
+*.jpg
+*.png
+*webpack*

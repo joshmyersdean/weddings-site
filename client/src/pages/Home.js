@@ -47,8 +47,8 @@ const DaysLeft = styled(Countdown)`
   color: ${props => props.theme.colors.foreground.secondary};
 `;
 
-const WEDDING_DATE = new Date(2020, 9, 18);
-const TODAY = new Date();
+const WEDDING_DATE = new Date(2020, 8, 19);
+let TODAY = new Date();
 
 class Home extends PureComponent {
 
